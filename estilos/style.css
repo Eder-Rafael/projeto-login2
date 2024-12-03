@@ -29,14 +29,17 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #2f1342;
+
+    transition: width 0.5s, height 0.5s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -49,4 +52,90 @@ section#login > div#imagem {
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+    text-align: justify;
+    line-height: 25px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    padding: 5px;
+    width: 40px;
+}
+
+div.campo > input {
+    background-color: #6ad4cf;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > div.campo {
+    display: block;
+    background-color: #5f2c82;
+    border: 2px solid #5f2c82;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+form > input[type=submit] {
+    background-color: #49a09d;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+form > input[type=submit]:hover {
+    background-color: #38807d;
+    cursor: pointer;
+}
+
+
+form > a.botao {
+    display: block;
+    background-color: white;
+    color: #265250;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #1047469a;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-top: 4px;
+    margin-top: 5px;
+
+    width: 100%;
+    height: 35px;
+}
+
+form > a.botao:hover {
+    background-color: #89d1cf;
+}
+
+form > a.botao > span {
+    font-size: 1.1em;
 }
